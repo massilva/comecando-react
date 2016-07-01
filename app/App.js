@@ -1,5 +1,9 @@
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    GitHub = require('./components/GitHub');
+(function () {
+    'use strict';
 
-ReactDOM.render(<GitHub />, document.getElementById('app'));
+    var React = require('react'),
+        ReactDOM = require('react-dom'),
+        GitHub = require('./components/GitHub');
+
+    ReactDOM.render(<GitHub />, document.getElementById('app'));
+}());
