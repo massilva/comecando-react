@@ -3,6 +3,14 @@
 
     var React = require('react'),
         UserRepos = React.createClass({
+            getInitialState: function () {
+                return {
+                    reposCount: 0
+                };
+            },
+            componentWillReceiveProps: function (props) {
+                this.setState({reposCount: props.repos.length});
+            },
             render: function () {
                 var repos = this.props.repos.map(function (repo, key) {
                     return (
@@ -22,6 +30,7 @@
                 });
                 return (
                     <div>
+                        <h2>{this.state.reposCount} repositórios.</h2>
                         {repos}
                     </div>
                 );

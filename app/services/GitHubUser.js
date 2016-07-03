@@ -1,4 +1,4 @@
-(function () {
+(function (module) {
     'use strict';
 
     var axios = require('axios'),
@@ -13,4 +13,4 @@
 
     module.exports = GitHubUser;
 
-}());
+}(module));
