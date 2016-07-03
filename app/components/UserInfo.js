@@ -2,6 +2,7 @@
     'use strict';
 
     var React = require('react'),
+        UserRepos = require('./UserRepos'),
         UserInfo = React.createClass({
             render: function () {
                 var templateUserInfo = this.props.user ? (
@@ -12,6 +13,11 @@
                             <p>{this.props.user.name}</p>
                             <p>Followers: {this.props.user.followers} / Following: {this.props.user.following}</p>
                             <p><a className="btn btn-default" href={this.props.user.html_url} role="button" target="_blank">Mais detalhes</a></p>
+                        </div>
+                        <div className="col-lg-8">
+                            <UserRepos
+                                repos={this.props.repos}
+                            />
                         </div>
                     </div>
                 ) : null;
