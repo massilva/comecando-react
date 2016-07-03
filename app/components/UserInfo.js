@@ -19,5 +19,10 @@
             }
         });
 
+    UserInfo.propTypes = {
+        user: React.PropTypes.object,
+        repos: React.PropTypes.array
+    };
+
     module.exports = UserInfo;
 }());
