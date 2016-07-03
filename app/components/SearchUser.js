@@ -13,7 +13,6 @@
                 GitHubUser.getReposByUsername(this.refs.username.value).then(function (response) {
                     this.props.updateRepos(response.data);
                 }.bind(this));
-
             },
             render: function () {
                 return (

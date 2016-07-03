@@ -2,8 +2,9 @@
     'use strict';
     var React = require('react'),
         SearchUser = require('./SearchUser'),
+        UserInfo = require('./UserInfo'),
         GitHub = React.createClass({
-            getInitalState: function () {
+            getInitialState: function () {
                 return {
                     user: null,
                     repos: []
@@ -21,6 +22,10 @@
                         <SearchUser
                             updateUser={this.updateUser}
                             updateRepos={this.updateRepos}
+                        />
+                        <UserInfo
+                            user={this.state.user}
+                            repos={this.state.repos}
                         />
                     </div>
                     );
